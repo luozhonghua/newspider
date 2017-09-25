@@ -1,0 +1,34 @@
+
+CREATE TABLE IF NOT EXISTS `music_tb`(
+   `music_id` INT UNSIGNED AUTO_INCREMENT,
+   `music_name`   VARCHAR(100),
+   `music_alias`  VARCHAR(100),
+   `music_singer` VARCHAR(100),
+   `music_time`   varchar(500) default NULL,
+   `music_rating` VARCHAR(100),
+   `music_votes`  VARCHAR(100),
+   `music_tags`   VARCHAR(100),
+   `music_url`    VARCHAR(100),
+   PRIMARY KEY ( `music_id` )
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `review_tb`(
+   `review_id` INT UNSIGNED AUTO_INCREMENT,
+   `review_title`   VARCHAR(100),
+   `review_content` text,
+   `review_author`  VARCHAR(100),
+   `review_music`   VARCHAR(100),
+   `review_time`    varchar(500) default NULL,
+   `review_url`    VARCHAR(100),
+   PRIMARY KEY ( `review_id` )
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `comments_tb`;
+CREATE TABLE `comments_tb` (
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `comments_author` varchar(200) default NULL,
+  `comments_content` text,
+  `comments_time` varchar(200) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

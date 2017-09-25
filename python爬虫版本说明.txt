@@ -1,0 +1,48 @@
+------------------------201709  版本说明------------------
+v.0.0.1版本
+1,除了安装好python环境外，要安装scrapy相关的插件
+具体参考
+http://www.cnblogs.com/txw1958/archive/2012/07/16/scrapy-tutorial.html
+2,建议采用pycharm开发工具进行开发，并设置eclipse模式,快速上手
+该工程就是pycharm工程文件
+3,该爬虫仅仅做了动态获取抽取和保存，并通用编码问题一直未得到解决
+4,爬虫设计建议有通用的编码转换库，通用的线程池，通用的文件、db连接库的基础功能
+之后设计python web功能透明出来给运维人员
+
+
+
+v.0.0.2版本
+1，解决部分编码通用问题，除了cvs文件格式外
+2, 规范部分工程规范，如pipeline通道重写
+3, 增加mysql存储功能
+4，增加mongodb存储功能
+5, 增加elasticsearch(集群)直接(无需转换)存储功能
+
+
+
+
+
+
+
+
+http://blog.csdn.net/cuihairu/article/details/52702636
+http://blog.csdn.net/leshami/article/details/49465751
+http://blog.csdn.net/leshami/article/details/52371395
+
+
+port = 27017
+dbpath = /data/mongodata/rs1
+logpath = /data/mongodata/rs1/rs1.log
+smallfiles = true
+fork = true
+pidfilepath = /var/run/mongo.pid
+
+ 
+
+[root@k8s-master conf]# cat mongodb.conf
+port = 27017
+dbpath = /data/mongodata/rs1
+logpath = /data/mongodata/rs1/rs1.log
+smallfiles = true
+fork = true
+pidfilepath = /var/run/mongo.pid
